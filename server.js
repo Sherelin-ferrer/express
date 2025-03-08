@@ -1,13 +1,13 @@
 import  Express, { response }  from "express";
 import "dotenv/config.js"
-import { request } from "http";
+ import "./config/database.js"
 
 const server = Express ()
 
-const port = process.env.port
+const PORT = process.env.PORT
 
-const ready = ()=> console.log("server ready in port:"+port)
+const ready = ()=> console.log("server ready in port:"+PORT)
 
 server.get("/shere",(request ,response) =>{response.send("Holaaa")} )
 
-server.listen(port, ready);
+server.listen(PORT, ready); 

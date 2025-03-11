@@ -1,4 +1,4 @@
-import {Schema,model} from "mongoose";
+import { Schema, model } from "mongoose";
 
 let collection = "cars"
 let schema = Schema(
@@ -7,8 +7,8 @@ let schema = Schema(
         model: { type: Number, require: true },
         brand: { type: String, require: true },
         color: { type: String, require: true },
-       
+
     }, { timestamps: true }
 )
-let Car = model(collection,schema)
+let Car = model(collection, schema)
 export default Car 

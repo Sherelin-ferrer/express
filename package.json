@@ -5,15 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    
     "start": "node ./server.js",
     "dev": "nodemon ./server.js",
+    
     "dataUsers": "node ./models/data/usersData.js",
-    "dataCars" : "node ./models/data/carsData.js",
-    "dataStories" : "node ./models/data/storyData.js",
-    "dataFoods" : "node ./models/data/foodsData.js",
+    "dataCars": "node ./models/data/carsData.js",
+    "dataStories": "node ./models/data/storyData.js",
+    "dataFoods": "node ./models/data/foodsData.js",
     "dataCountries": "node ./models/data/countriesData.js"
-       
   },
   "repository": {
     "type": "git",
@@ -27,9 +26,11 @@
   },
   "homepage": "https://github.com/Sherelin-ferrer/express#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "mongoose": "^8.12.1"
+    "mongoose": "^8.12.1",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

@@ -3,7 +3,8 @@ import "dotenv/config.js"
  import "./config/database.js"
 import cors from "cors"
 import morgan from "morgan"
-import routerIndex from "./router/index.js"
+import indexRouter from "./router/indexRouter.js";
+
 
 
 const server = express ()
@@ -27,6 +28,8 @@ server.use(cors())
 server.use(morgan('dev'))
 
 //Configurar Enrutador
-server.use('/api',routerIndex)
+server.use('/api',indexRouter)
+
+//server.use(not_fo)
 
 server.listen(PORT, ready); 

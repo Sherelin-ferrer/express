@@ -1,12 +1,20 @@
-import {Schema,model} from "mongoose";
+import { Schema, model } from "mongoose";
 
-let collection = "users"
+let collection = "users";
+
 let schema = Schema(
-    {
-        name: { type: String, require: true },
-        email: { type: String, require: true },
-        edad: { type: Number, require: true },
-    }, { timestamps: true }
-)
-let user = model(collection,schema)
-export default user 
+  {
+   
+    email: { type: String, required: true, unique: true },
+    password: { type: String, required: true },
+    photo: { type: String, required: false },
+    role: { type: Number, default: 0 }, 
+    online: { type: Boolean, default: false }
+  },
+  {
+    timestamps: true
+  }
+);
+
+let user = model(collection, schema);
+export default user;
